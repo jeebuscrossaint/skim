@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Find packages
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTKMM REQUIRED gtkmm-3.0)
-pkg_check_modules(WEBKIT REQUIRED webkit2gtk-4.0)
+pkg_check_modules(WEBKIT REQUIRED webkit2gtk-4.1)  # Changed from 4.0 to 4.1
 pkg_check_modules(LUA REQUIRED lua5.3)
 
 # Include directories
