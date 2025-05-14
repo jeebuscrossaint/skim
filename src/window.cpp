@@ -47,7 +47,7 @@ Window::Window() : id_(generateId()) {
     }), nullptr);
 
     // Connect key press event
-    g_signal_connect(window_, "key-press-event", G_CALLBACK(+[](GtkWidget* widget, GdkEventKey* event, gpointer data) {
+    g_signal_connect(window_, "key-press-event", G_CALLBACK(+[](GtkWidget* widget, GdkEventKey* event, gpointer data) -> gboolean {
         Window* self = static_cast<Window*>(data);
 
         // Handle Ctrl+Q to quit
