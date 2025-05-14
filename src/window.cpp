@@ -83,6 +83,7 @@ Window::Window() : id_(generateId()) {
         return FALSE;
     }), this);
 
+
     // Show all
     gtk_widget_show_all(GTK_WIDGET(window_));
 }

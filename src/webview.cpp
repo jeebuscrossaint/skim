@@ -99,8 +99,9 @@ void WebView::resetZoom() {
 }
 
 void WebView::runJavaScript(const std::string& script) {
-    webkit_web_view_run_javascript(webView_, script.c_str(), nullptr, nullptr, nullptr);
+    webkit_web_view_evaluate_javascript(webView_, script.c_str(), -1, nullptr, nullptr, nullptr, nullptr, nullptr);
 }
+
 
 void WebView::scrollDown() {
     runJavaScript("window.scrollBy(0, 100);");
